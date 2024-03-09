@@ -5,3 +5,10 @@
 # 原理:调用 Powershell 中的 NetQos Module (仅Windows平台可用)
 # 界面展示
 ![img](./img1.png)
+# 例子
+```
+# DAE 规则
+dscp(4) -> direct
+#若DSCP值设定为5 此处填入5
+dscp(5) -> game 
+```
