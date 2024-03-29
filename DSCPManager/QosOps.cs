@@ -9,6 +9,7 @@ namespace DSCPManager
         public static string[] qosPoliciesNameList = Array.Empty<string>();
         public static void ReadQosPolicy()
         {
+            qosPoliciesList.Clear();
             InitialSessionState initial = InitialSessionState.CreateDefault();
             initial.ExecutionPolicy = Microsoft.PowerShell.ExecutionPolicy.Unrestricted;
             Runspace runspace = RunspaceFactory.CreateRunspace(initial);
@@ -55,7 +56,7 @@ namespace DSCPManager
             .AddParameter("Name", name)
             .AddParameter("Confirm", false);
             var result = ps.Invoke();
-            MessageBox.Show("删除成功");
+            //MessageBox.Show("删除成功");
         }
         public static void UpdateQosPolicy(string name, string key, string value)
         {
@@ -70,7 +71,7 @@ namespace DSCPManager
             .AddParameter("Name", name)
             .AddParameter(key, value);
             var result = ps.Invoke();
-            MessageBox.Show("修改成功");
+            //MessageBox.Show("修改成功");
         }
         public static void CreateQosPolicy(QosPolicy policy)
         {

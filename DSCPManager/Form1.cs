@@ -118,5 +118,23 @@ namespace DSCPManager
             }
             RefreshList();
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            QosOps.ReadQosPolicy();
+            foreach (var i in QosOps.qosPoliciesNameList)
+            {
+                if (i.StartsWith(textBox10.Text))
+                {
+                    QosOps.UpdateQosPolicy(i, "DSCPAction", textBox11.Text);
+                }
+            }
+            RefreshList();
+        }
     }
 }

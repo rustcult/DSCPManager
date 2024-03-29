@@ -64,10 +64,18 @@
             label15 = new Label();
             textBox10 = new TextBox();
             label16 = new Label();
+            panel5 = new Panel();
+            button8 = new Button();
+            label13 = new Label();
+            textBox9 = new TextBox();
+            label14 = new Label();
+            textBox11 = new TextBox();
+            label17 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -372,7 +380,7 @@
             panel4.Controls.Add(label15);
             panel4.Controls.Add(textBox10);
             panel4.Controls.Add(label16);
-            panel4.Location = new Point(858, 45);
+            panel4.Location = new Point(858, 44);
             panel4.Name = "panel4";
             panel4.Size = new Size(268, 372);
             panel4.TabIndex = 11;
@@ -413,11 +421,79 @@
             label16.TabIndex = 1;
             label16.Text = "批量删除DSCP规则";
             // 
+            // panel5
+            // 
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(textBox11);
+            panel5.Controls.Add(label17);
+            panel5.Controls.Add(button8);
+            panel5.Controls.Add(label13);
+            panel5.Controls.Add(textBox9);
+            panel5.Controls.Add(label14);
+            panel5.Location = new Point(1132, 44);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(268, 372);
+            panel5.TabIndex = 12;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(72, 176);
+            button8.Name = "button8";
+            button8.Size = new Size(101, 40);
+            button8.TabIndex = 9;
+            button8.Text = "批量修改";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(19, 39);
+            label13.Name = "label13";
+            label13.Size = new Size(32, 17);
+            label13.TabIndex = 3;
+            label13.Text = "前缀";
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(116, 33);
+            textBox9.Name = "textBox9";
+            textBox9.PlaceholderText = "例如APEX-";
+            textBox9.Size = new Size(100, 23);
+            textBox9.TabIndex = 2;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(0, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(111, 17);
+            label14.TabIndex = 1;
+            label14.Text = "批量修改DSCP规则";
+            label14.Click += label14_Click;
+            // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(116, 90);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(100, 23);
+            textBox11.TabIndex = 10;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(19, 90);
+            label17.Name = "label17";
+            label17.Size = new Size(51, 17);
+            label17.TabIndex = 9;
+            label17.Text = "DSCP值";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1141, 450);
+            ClientSize = new Size(1504, 450);
+            Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -433,6 +509,8 @@
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -474,5 +552,12 @@
         private Label label15;
         private TextBox textBox10;
         private Label label16;
+        private Panel panel5;
+        private Button button8;
+        private Label label13;
+        private TextBox textBox9;
+        private Label label14;
+        private TextBox textBox11;
+        private Label label17;
     }
 }
